@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from demo.dashboardpack.com/adminty-html/pages/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Feb 2026 15:26:06 GMT -->
+
+<head>
+    <title>Adminty - Premium Admin Template by Colorlib </title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="#">
+    <meta name="keywords"
+        content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+    <link rel="icon" href="https://demo.dashboardpack.com/adminty-html/assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/feather/css/feather.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/theme/style.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <style>
+/* Card look */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: none;
+}
+
+/* Table header */
+table.dataTable thead th {
+    background: linear-gradient(45deg, #1e1e2f, #2b2b40);
+    color: #fff;
+    font-weight: 600;
+    border: none !important;
+}
+
+/* Table body */
+table.dataTable tbody tr {
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+table.dataTable tbody tr:hover {
+    background-color: #f1f5ff;
+}
+
+/* Table cells */
+table.dataTable tbody td {
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+/* Paid / Balance highlight */
+.balance-zero {
+    color: #28a745;
+    font-weight: 600;
+}
+.balance-due {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* Search box */
+.dataTables_filter input {
+    border-radius: 20px;
+    padding: 6px 14px;
+    border: 1px solid #ddd;
+}
+
+/* Length dropdown */
+.dataTables_length select {
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+/* Pagination */
+.dataTables_paginate .paginate_button {
+    border-radius: 50% !important;
+    margin: 0 3px;
+    border: none !important;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: #556ee6 !important;
+    color: #fff !important;
+}
+
+/* Header title */
+.card-header h5 {
+    font-weight: 600;
+    color: #333;
+}
+</style>
+
+
+</head>
+
+<body>
+
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="fa-solid fa-toggle-off"></i>
+                        </a>
+                        <a href="index.html">
+                            <img class="img-fluid"
+                                src="https://computerguru.co.in/wp-content/uploads/2023/09/Computer-Guru-Training-Institute-IDPL-Rishikesh-Uttarakhand-logo.png"
+                                alt="Theme-Logo" width="30%" style="position: relative;left: -60px;" />
+                        </a>
+                        <a class="mobile-options">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-container">
+                        <ul class="nav-left">
+                            <li class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-text search-close">
+                                            <i class="fa-solid fa-x"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter Keyword">
+                                        <span class="input-group-text search-btn"><i
+                                                class="fa-solid fa-magnifying-glass"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                                    <i class="fa-solid fa-maximize"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+
+                            <li class="user-profile header-notification">
+                                <div class="dropdown-primary dropdown">
+                                    <div class="dropdown-toggle" data-bs-toggle="dropdown">
+                                        <img src="https://computerguru.co.in/wp-content/uploads/2026/01/pushpa.jpg"
+                                            class="img-radius" alt="User-Profile-Image">
+                                        <span>Pushpendra Bisht</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </div>
+                                    <ul class="show-notification profile-notification dropdown-menu"
+                                        data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                        <li>
+                                            <a href="#!">
+                                                <i class="fa-solid fa-gear"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="user-profile.html">
+                                                <i class="fa-solid fa-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html">
+                                                <i class="fa-solid fa-envelope"></i> My Messages
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-lock-screen.html">
+                                                <i class="fa-solid fa-lock"></i> Lock Screen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="auth-normal-sign-in.html">
+                                                <i class="fa-solid fa-right-from-bracket"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="pcoded-inner-navbar main-menu">
+                            <!-- Dashboard -->
+                            <div class="pcoded-navigatio-lavel">Navigation</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a href="index.html">
+                                        <span class="pcoded-micon">
+                                            <i class="fa-regular fa-house"></i>
+                                        </span>
+                                        <span class="">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="Add-student-form.html">
+                                        <span class="pcoded-micon">
+                                            <i class="fa-solid fa-user-plus"></i>
+                                        </span>
+                                        <span class="">Add Student</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="Add-student-fees.html">
+                                        <span class="pcoded-micon">
+                                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        </span>
+                                        <span class="">Add Fees</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="View-student-fees.html">
+                                        <span class="pcoded-micon">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </span>
+                                        <span class="">View Fees</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                               
+                                    <!-- Page body start -->
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Student Fees Records (Month Wise)</h5>
+                                        </div>
+
+                                        <div class="card-body table-responsive">
+                                            <!-- <table  class="display w-full"></table> -->
+                                            <table id="studentsTable" class="table table-bordered table-striped">
+                                                <thead class="table-dark">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Reg. No</th>
+                                                        <th>Student Name</th>
+                                                        <th>Course</th>
+                                                        <th>Fees Month</th>
+                                                        <th>Total Fee</th>
+                                                        <th>Paid</th>
+                                                        <th>Balance</th>
+                                                        <th>Payment Mode</th>
+                                                        <th>Payment Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>EMCE001</td>
+                                                        <td>Amit Kumar</td>
+                                                        <td>Diploma (12 Month)</td>
+                                                        <td>January</td>
+                                                        <td>12000</td>
+                                                        <td>1000</td>
+                                                        <td>11000</td>
+                                                        <td>Cash</td>
+                                                        <td>10-01-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>EMCE002</td>
+                                                        <td>Rohit Sharma</td>
+                                                        <td>Diploma (12 Month)</td>
+                                                        <td>January</td>
+                                                        <td>12000</td>
+                                                        <td>1000</td>
+                                                        <td>11000</td>
+                                                        <td>UPI</td>
+                                                        <td>11-01-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>EMCE003</td>
+                                                        <td>Neha Verma</td>
+                                                        <td>Certificate (6 Month)</td>
+                                                        <td>February</td>
+                                                        <td>6000</td>
+                                                        <td>1000</td>
+                                                        <td>5000</td>
+                                                        <td>Cash</td>
+                                                        <td>05-02-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>EMCE004</td>
+                                                        <td>Pooja Singh</td>
+                                                        <td>Advanced Diploma (18 Month)</td>
+                                                        <td>February</td>
+                                                        <td>18000</td>
+                                                        <td>1500</td>
+                                                        <td>16500</td>
+                                                        <td>Online</td>
+                                                        <td>06-02-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>EMCE005</td>
+                                                        <td>Rahul Negi</td>
+                                                        <td>Typing (3 Month)</td>
+                                                        <td>March</td>
+                                                        <td>3000</td>
+                                                        <td>1000</td>
+                                                        <td>2000</td>
+                                                        <td>Cash</td>
+                                                        <td>01-03-2025</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>EMCE006</td>
+                                                        <td>Anjali Rawat</td>
+                                                        <td>Diploma (12 Month)</td>
+                                                        <td>March</td>
+                                                        <td>12000</td>
+                                                        <td>2000</td>
+                                                        <td>10000</td>
+                                                        <td>UPI</td>
+                                                        <td>03-03-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>EMCE007</td>
+                                                        <td>Deepak Chauhan</td>
+                                                        <td>Full Stack (12 Month)</td>
+                                                        <td>April</td>
+                                                        <td>24000</td>
+                                                        <td>2000</td>
+                                                        <td>22000</td>
+                                                        <td>Bank</td>
+                                                        <td>02-04-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>EMCE008</td>
+                                                        <td>Sneha Joshi</td>
+                                                        <td>Certificate (6 Month)</td>
+                                                        <td>April</td>
+                                                        <td>6000</td>
+                                                        <td>1000</td>
+                                                        <td>5000</td>
+                                                        <td>Cash</td>
+                                                        <td>05-04-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>EMCE009</td>
+                                                        <td>Vikas Rana</td>
+                                                        <td>Advanced Diploma (18 Month)</td>
+                                                        <td>May</td>
+                                                        <td>18000</td>
+                                                        <td>2000</td>
+                                                        <td>16000</td>
+                                                        <td>UPI</td>
+                                                        <td>04-05-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>EMCE010</td>
+                                                        <td>Kavita Shah</td>
+                                                        <td>Diploma (12 Month)</td>
+                                                        <td>May</td>
+                                                        <td>12000</td>
+                                                        <td>1000</td>
+                                                        <td>11000</td>
+                                                        <td>Online</td>
+                                                        <td>06-05-2025</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>EMCE011</td>
+                                                        <td>Manish Gupta</td>
+                                                        <td>Short Course (3 Month)</td>
+                                                        <td>June</td>
+                                                        <td>3000</td>
+                                                        <td>1000</td>
+                                                        <td>2000</td>
+                                                        <td>Cash</td>
+                                                        <td>01-06-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>EMCE012</td>
+                                                        <td>Nikita Bisht</td>
+                                                        <td>Certificate (6 Month)</td>
+                                                        <td>June</td>
+                                                        <td>6000</td>
+                                                        <td>2000</td>
+                                                        <td>4000</td>
+                                                        <td>UPI</td>
+                                                        <td>03-06-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>EMCE013</td>
+                                                        <td>Saurabh Rawat</td>
+                                                        <td>Diploma (12 Month)</td>
+                                                        <td>July</td>
+                                                        <td>12000</td>
+                                                        <td>3000</td>
+                                                        <td>9000</td>
+                                                        <td>Cash</td>
+                                                        <td>02-07-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>EMCE014</td>
+                                                        <td>Rina Pandey</td>
+                                                        <td>Typing (3 Month)</td>
+                                                        <td>July</td>
+                                                        <td>3000</td>
+                                                        <td>1000</td>
+                                                        <td>2000</td>
+                                                        <td>Cash</td>
+                                                        <td>05-07-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>EMCE015</td>
+                                                        <td>Arjun Mehta</td>
+                                                        <td>Full Stack (12 Month)</td>
+                                                        <td>August</td>
+                                                        <td>24000</td>
+                                                        <td>4000</td>
+                                                        <td>20000</td>
+                                                        <td>Online</td>
+                                                        <td>01-08-2025</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td>EMCE016</td>
+                                                        <td>Shalini Joshi</td>
+                                                        <td>Advanced Diploma (18 Month)</td>
+                                                        <td>August</td>
+                                                        <td>18000</td>
+                                                        <td>2000</td>
+                                                        <td>16000</td>
+                                                        <td>UPI</td>
+                                                        <td>03-08-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td>EMCE017</td>
+                                                        <td>Mohit Thakur</td>
+                                                        <td>Certificate (6 Month)</td>
+                                                        <td>September</td>
+                                                        <td>6000</td>
+                                                        <td>3000</td>
+                                                        <td>3000</td>
+                                                        <td>Cash</td>
+                                                        <td>04-09-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>EMCE018</td>
+                                                        <td>Priya Kapoor</td>
+                                                        <td>Diploma (12 Month)</td>
+                                                        <td>September</td>
+                                                        <td>12000</td>
+                                                        <td>2000</td>
+                                                        <td>10000</td>
+                                                        <td>Bank</td>
+                                                        <td>06-09-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>19</td>
+                                                        <td>EMCE019</td>
+                                                        <td>Rakesh Kumar</td>
+                                                        <td>Short Course (1 Month)</td>
+                                                        <td>October</td>
+                                                        <td>1000</td>
+                                                        <td>1000</td>
+                                                        <td>0</td>
+                                                        <td>Cash</td>
+                                                        <td>01-10-2025</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20</td>
+                                                        <td>EMCE020</td>
+                                                        <td>Simran Kaur</td>
+                                                        <td>Diploma (12 Month)</td>
+                                                        <td>October</td>
+                                                        <td>12000</td>
+                                                        <td>1000</td>
+                                                        <td>11000</td>
+                                                        <td>UPI</td>
+                                                        <td>02-10-2025</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- Page body end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+       
+
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+            <!-- DataTables JS -->
+            <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+                 <script>
+$(document).ready(function () {
+    $('#studentsTable').DataTable();
+});
+</script>
+
+            <!-- Required Jquery -->
+            <!-- <script src="plugins/jquery/dist/jquery.min.js"></script> -->
+            <script src="plugins/jquery-ui/dist/jquery-ui.min.js"></script>
+            <script src="plugins/%40popperjs/core/dist/umd/popper.min.js"></script>
+            <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!-- jquery slimscroll js -->
+            <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+            <script src="assets/pages/form-validation/validate.js"></script>
+            <!-- i18next.min.js -->
+            <script src="plugins/i18next/dist/umd/i18next.min.js"></script>
+            <script src="plugins/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+            <script
+                src="plugins/i18next-browser-languagedetector/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+            <script src="plugins/jquery-i18next/jquery-i18next.min.js"></script>
+            <!-- Custom js -->
+            <script src="assets/pages/form-validation/form-validation.js"></script>
+
+            <script src="assets/js/pcoded.min.js"></script>
+            <!-- Theme persistence - saves user's dark/light mode preference -->
+            <script src="assets/js/theme-persistence.html"></script>
+            <script src="assets/js/vartical-layout.min.js"></script>
+            <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+            <script src="assets/js/script.js"></script>
+            <script defer
+                src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+                integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+                data-cf-beacon='{"version":"2024.11.0","token":"a6117f2172474edeb039d2a90d541d53","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+                crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from demo.dashboardpack.com/adminty-html/pages/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Feb 2026 15:26:10 GMT -->
+
+</html>
